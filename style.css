@@ -163,6 +163,63 @@ body{
     cursor: pointer;
     font-family: "Vibur", sans-serif;
 }
+.box-wrapper{
+    height: 95vh;
+    width: 100%;
+    display: flex;
+    flex: column;
+    text-align: center;
+}
+.box{
+    border: solid 1px white;
+    flex-grow: 1;
+    background-color: #fff;
+}
+
+.box-img2{
+    border: solid 1px white;
+    flex-grow: 9;
+}
+
+.img2{
+    margin-top: 60px;
+    width: 400px;
+    height:500px;
+    border-radius: 2%;   
+}
+.box-txt{
+    display: flex;
+    flex: column;
+    text-align: left;
+    font-size: 14px;
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 25px;
+}
+.box-txt .main-meal{
+    color:rgb(0, 0, 0);
+    display: block;
+    padding: 12px;
+    background-color: beige;
+    flex-grow: 1;
+    font-weight: bold;
+    
+}
+.box-txt .sub-meal{
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.sub-sub-meal{
+    border: solid 0.5px rgb(170, 170, 170);
+}
+
+.sub-main-meal{
+}
+
+
+
 
 
 
