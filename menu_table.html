@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Menu</title>
+        <link href='https://fonts.googleapis.com/css?family=Vibur:400' rel='stylesheet'>
+        <link href = "menuStyle.css" rel = "stylesheet">
+    </head>
+    <body>
+        <div class="box-wrapper">
+            <div class="box">
+                <div class = "box-txt">
+                    <ul>
+                        <li class="main-meal">Breakfast</li>
+                            <div class="sub-main-meal">
+                                <ul class="sub-meal">
+                                    <li class="sub_sub_meal" id = "item" draggable="true">Déjeuner marocain</li>
+                                    <li class="sub_sub_meal" id = "item" draggable="true">Déjeuner anglais</li>
+                                    <li class="sub_sub_meal" id = "item" draggable="true">Déjeuner américain</li>
+                                </ul>
+                            </div>
+                        <li class="main-meal">Lunch</li>
+                            <div class="sub-main-meal">
+                                <ul class="sub-meal">
+                                    <li class="sub_sub_meal" id = "item" draggable="true">Pasta</li>
+                                    <li class="sub_sub_meal" id = "item" draggable="true">Pizza</li>
+                                    <li class="sub_sub_meal" id = "item" draggable="true">Burger</li>
+                                </ul>
+                            </div>
+                        <li class="main-meal">Dinner</li>
+                            <div class="sub-main-meal">
+                                <ul class="sub-meal">
+                                    <li class="sub_sub_meal" id = "item" draggable="true">Hrira</li>
+                                    <li class="sub_sub_meal" id = "item" draggable="true">Salade</li>
+                                    <li class="sub_sub_meal" id = "item" draggable="true">Omelette</li>   
+                                </ul>
+                                    
+                            </div>
+                    </ul>
+                </div>
+            </div>
+            <div class = "box-img2">
+                <img class = "img1" src="image/food.png" alt = menu-background>
+                <!--<img class = "img2" src ="image/menu.png" alt="menu"> -->
+                <div class="menu">Menu</div>
+                <div class = "drop_container">
+                    <div class="container" id = "container1"></div>
+                    <div class="container" id = "container2"></div>
+                    <div class="container" id = "container3"></div>
+                    <div class="container" id = "container4"></div>
+                    <div class="container" id = "container5"></div>
+                    <div class="container" id = "container6"></div>
+                    <div class="container" id = "container7"></div>
+                    <div class="container" id = "container8"></div>
+                    <div class="container" id = "container9"></div>
+
+                </div>
+                
+            </div>
+
+
+        </div>
+        <script src="js/drag-n-drop-menu.js"></script>
+    </body>
+</html>
