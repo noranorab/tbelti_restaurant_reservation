@@ -1,0 +1,150 @@
+body{
+    background-color: black;
+    
+}
+
+.box-wrapper{
+    display: flex;
+}
+.box{
+    border: none;
+    flex-grow: 1;
+    background-color: rgb(0, 0, 0);
+}
+
+.box-img2{
+    border: solid 1px rgb(0, 0, 0);
+    flex-grow: 4;
+    
+}
+
+
+.menu{
+    position : relative;
+    width: 300px;
+    height:380px;
+    border-radius: 2%;   
+    top: 150px;
+    left:50px;
+    background-color: rgb(255, 248, 184);
+    opacity: 0.7;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 100;
+    font-family: "Vibur", sans-serif;
+}
+
+
+
+.img1{
+    position: absolute;
+    width: 50%;
+    height: 650px;
+    left: 620px;
+}
+    
+.box-txt{
+    display: flex;
+    margin-top: 90px;
+    flex-direction: column;
+    text-align: left;
+    font-size: 20px;
+    font-family: "Vibur", sans-serif;
+    line-height: 25px;
+
+}
+.box-txt .main-meal{
+    color:rgb(255, 255, 255);
+    display: block;
+    flex-grow: 1;
+    font-size: 25px;
+    animation: pulsate 0.11s ease-in-out infinite alternate;   
+    text-shadow:
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 21px #fff,
+      0 0 42px #fff,
+      0 0 82px #fff,
+      0 0 92px #f09,
+      0 0 102px #f09,
+      0 0 151px #f09;
+    
+}
+@keyframes pulsate {
+    
+    100% {
+  
+        text-shadow:
+        0 0 4px #f09,
+        0 0 11px #f09,
+        0 0 19px #f09,
+        0 0 40px #f09,
+        0 0 80px #f09,
+        0 0 90px #f09,
+        0 0 100px #f09,
+        0 0 150px #f09;
+    
+    }
+    
+    0% {
+  
+      text-shadow:
+      0 0 4px #f09,
+      0 0 10px #f09,
+      0 0 18px #f09,
+      0 0 38px #f09,
+      0 0 73px #f09,
+      0 0 80px #f09,
+      0 0 94px #f09,
+      0 0 140px #f09;
+  
+  }
+}
+.box-txt .sub-meal{
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+    list-style-type: none;
+    color: beige;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.sub_sub_meal{
+    border: solid 0.5px rgb(170, 170, 170);
+}
+
+.drop_container{
+    position: relative;
+    left:100px;
+    bottom: 180px;
+
+    
+}
+
+.hide{
+    display: none;
+}
+
+
+
+.sous_menu{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 50px;
+}
+.added{
+    font-family: "Vibur", sans-serif;
+    font-size: 22px;
+    color: rgb(46, 13, 13);
+    list-style-type: none;
+}
+
+.add{
+    float: right;
+    color: beige;
+    background-color: rgba(107, 89, 50, 0.5);
+    
+}
