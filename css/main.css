@@ -8,6 +8,7 @@
 }
 body{
     font-family: 'Poppins', sans-serif;
+    background-color: black;
 }
 .banner{
     min-height: 100vh;
@@ -29,7 +30,49 @@ body{
 .banner h2{
     padding-bottom: 40px;
     margin-bottom: 20px;
+    animation: pulsate 0.11s ease-in-out infinite alternate;   
+    text-shadow:
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 21px #fff,
+      0 0 42px #fff,
+      0 0 82px #fff,
+      0 0 92px #fff,
+      0 0 102px #f09,
+      0 0 151px #f09;
 }
+@keyframes pulsate {
+    
+    100% {
+  
+        text-shadow:
+        0 0 4px #f09,
+        0 0 11px #f09,
+        0 0 19px #f09,
+        0 0 40px #f09,
+        0 0 80px #f09,
+        0 0 90px #f09,
+        0 0 100px #f09,
+        0 0 150px #f09;
+    
+    }
+    
+    0% {
+  
+      text-shadow:
+      0 0 4px #f09,
+      0 0 10px #f09,
+      0 0 18px #f09,
+      0 0 38px #f09,
+      0 0 73px #f09,
+      0 0 80px #f09,
+      0 0 94px #f09,
+      0 0 140px #f09;
+  
+  }
+}
+
+
 .card-content{
     background: #fff;
     height: 330px;
