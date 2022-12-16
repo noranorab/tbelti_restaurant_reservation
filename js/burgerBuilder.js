@@ -14,8 +14,24 @@ let e3 = document.querySelector('#num3');
 let e4 = document.querySelector('#num4');
 let e5 = document.querySelector('#num5');
 
+let bread_up = document.querySelector('.bread-top');
+let bread_down = document.querySelector('.bread-bottom');
+let steak = document.querySelector('.steak');
+let tomate = document.querySelector('.tomate');
+let salade = document.querySelector('.salad');
+let cheese = document.querySelector('.cheese');
+
+let box = document.querySelector('.box');
+let inside = document.querySelector('.inside');
+let insideContainer = document.querySelector('.inside_container');
+
+steak.style.visibility = 'hidden';
+tomate.style.visibility = 'hidden';
+salade.style.visibility = 'hidden';
+cheese.style.visibility = 'hidden';
 
 for (let i = 0; i<wrappers.length; i++){
+
     if (wrappers[i].id == "wrapper1"){
         plus[i].addEventListener('click',function(){
             a1++;
@@ -28,6 +44,16 @@ for (let i = 0; i<wrappers.length; i++){
             a2++;
             a2 = (a2 < 10)? "0" + a2 : a2;
             e2.innerText = a2;
+            steak.style.visibility = "visible";
+            var new_steak = document.createElement('div');
+            new_steak.classList.add("steak");
+            box.appendChild(new_steak);
+            box.insertBefore(new_steak, bread_down);
+            
+            console.log(new_steak);
+            console.log('steak added');
+            
+            
         })
     }
     if (wrappers[i].id == "wrapper3"){
@@ -35,6 +61,12 @@ for (let i = 0; i<wrappers.length; i++){
             a3++;
             a3 = (a3 < 10)? "0" + a3 : a3;
             e3.innerText = a3;
+            cheese.style.visibility = "visible";
+            var new_cheese = document.createElement('div');
+            new_cheese.classList.add("cheese");
+            box.appendChild(new_cheese);
+            box.insertBefore(new_cheese, bread_down)
+            
         })
     }
     if (wrappers[i].id == "wrapper4"){
@@ -42,6 +74,11 @@ for (let i = 0; i<wrappers.length; i++){
             a4++;
             a4 = (a4 < 10)? "0" + a4 : a4;
             e4.innerText = a4;
+            salade.style.visibility = "visible";
+            var new_salad = document.createElement('div');
+            new_salad.classList.add("salad");
+            box.appendChild(new_salad);
+            box.insertBefore(new_salad, bread_down)
         })
     }
     if (wrappers[i].id == "wrapper5"){
@@ -49,32 +86,12 @@ for (let i = 0; i<wrappers.length; i++){
             a5++;
             a5 = (a5 < 10)? "0" + a5 : a5;
             e5.innerText = a5;
+            tomate.style.visibility = "visible";
+            var new_tomato = document.createElement('div');
+            new_tomato.classList.add("tomate");
+            box.appendChild(new_tomato);
+            box.insertBefore(new_tomato, bread_down)
         })
     }
 }
 
-
-
-
-/*
-for (let i=0; i<plus.length;i++){
-    plus[i].addEventListener('click', add(num[i]));
-}
-
-function add(e){        
-    a++;
-    a = (a < 10)? "0" + a : a;
-    e.innerText = a;
-}
-
-for (let i=0; i<plus.length;i++){
-    minus[i].addEventListener('click', function(){
-        if (a > 1){
-            a--;
-            a = (a < 10)? "0" + a : a;
-            num.innerText = a;
-        }       
-    });
-}
-
-*/
