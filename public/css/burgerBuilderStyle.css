@@ -1,0 +1,202 @@
+*{
+    background-color: rgb(238, 182, 99);
+}
+.big_big_container{
+    padding-top: 50px;
+}
+
+h1{
+   color: rgb(255, 255, 255);
+   font-size: 60px; 
+   text-align: center;
+   font-family: 'Poppins', sans-serif;
+   text-shadow: 1px 5px 8px black;
+}
+
+
+.big_container{
+    background-color: white;
+    border-radius: 5px;
+    border: solid 2px white;
+    box-shadow: 4px 1px 10px rgb(0, 0, 0);
+    width: 320px;
+    height: 500px;
+    
+}
+
+div .container{
+    display: flex;
+    flex-direction: column;
+    float: left;
+} 
+img{
+    width: 100px;
+    height: 50px;
+    background-color: white;
+}
+
+.burgerPart{
+    background-color: white;
+    padding-top: 35px;
+    padding-left: 20px;
+}
+.wrapperBox{
+    display: flex;
+    flex-direction: row;
+}
+
+.wrapper{
+    padding-left: 80px;
+    display:flex;
+    align-items: center;
+    background: rgb(255, 255, 255);
+}
+
+.wrapper span{
+    background-color: white;
+    width: 30px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 300;
+    box-shadow: 1px 2px 5px black;
+    cursor: pointer;
+}
+.wrapper span.num{
+    font-size: 15px;
+    border-right: 2px solid rgba(0,0,0,0,0.2);
+    border-left: 2px solid rgba(0,0,0,0.2);
+    pointer-events: none;
+}
+
+
+.box{
+    width:500px;
+    margin-left: 500px;
+    height:450px;
+    margin-top: 80px;
+}
+
+.bread-top{
+    height:20%;
+    width:80%;
+    background: linear-gradient(#bc581e, #e27b36);
+    border-radius: 50% 50% 0 0;
+    box-shadow: inset -15px 0 #c15711;
+    margin: 2% auto;
+    position: relative;
+}
+.salad{
+    width:90%;
+    height:7%;
+    background: linear-gradient(#228c1d, #91ce50);
+    margin: auto;
+    border-radius: 20px;
+}
+
+.bread-bottom{
+    height: 13%;
+    width: 80%;
+    background: linear-gradient(#f08e4a, #e27b36);
+    margin: 2px auto;
+    box-shadow: inset -15px #c15711;
+    border-radius: 0 0 30px 30px;
+}
+
+
+.steak{
+    width: 80%;
+    height: 6%;
+    background: linear-gradient(#7f3608, #702e05);
+    margin: 2% auto;
+    border-radius: 2px;
+}
+.cheese{
+    width: 80%;
+    height: 3%;
+    background: linear-gradient(#f4d004, #d6bb22);
+    border-radius: 20px;
+    margin: 2% auto;
+}
+
+.tomate{
+    width:80%;
+    height: 4%;
+    background: red;
+    margin: 2% auto;
+}
+
+.seeds1{
+    position: absolute;
+    width: 10%;
+    height: 15%;
+    background-color: white;
+    left: 30%;
+    top: 50%;
+    border-radius: 40%;
+    transform: rotate(-20deg);
+    box-shadow: inset -2px 3px #c9c9c9;
+
+}
+
+.seeds1:after{
+    content:"";
+    width:100%;
+    height:100%;
+    position:absolute;
+    background-color: white;
+    left: -170%;
+    top:-260%;
+    border-radius: 40%;
+    transform: rotate(20deg);
+    box-shadow: inset -1px 2px #c9c9c9;
+}
+
+.seeds1:before{
+    content:"";
+    width:100%;
+    height:100%;
+    position:absolute;
+    background-color: white;
+    left: 180%;
+    top:-50%;
+    border-radius: 40%;
+    transform: rotate(20deg);
+    box-shadow: inset -1px -3px #c9c9c9;
+}
+
+.seeds2{
+    position: absolute;
+    width: 10%;
+    height: 15%;
+    background-color: white;
+    left: 64%;
+    top: 50%;
+    border-radius: 40%;
+    transform: rotate(10deg);
+    box-shadow: inset -2px -0 #c9c9c9;
+}
+
+.seeds2:after{
+    content:"";
+    width:100%;
+    height:100%;
+    position:absolute;
+    background-color: white;
+    left: 190%;
+    top:-70%;
+    border-radius: 40%;
+    transform: rotate(70deg);
+    box-shadow: inset -1px -3px #c9c9c9;
+}
+.bread-between{
+    margin-top:120px;
+}
+
+.steak1{
+    width: 80%;
+    height: 6%;
+    background: linear-gradient(#7f3608, #702e05);
+    margin: 2% auto;
+    border-radius: 2px;
+
+}
