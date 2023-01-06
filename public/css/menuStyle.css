@@ -112,6 +112,8 @@ body{
 
 .sub_sub_meal{
     border: solid 0.5px rgb(170, 170, 170);
+    display: flex;
+    justify-content: space-between;
 }
 
 .drop_container{
@@ -146,5 +148,11 @@ body{
     float: right;
     color: beige;
     background-color: rgba(107, 89, 50, 0.5);
+}
+
+
+.prix{
+    font-size: 15px;
+    color: rosybrown;
     
 }

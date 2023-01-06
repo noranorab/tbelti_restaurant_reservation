@@ -34,15 +34,14 @@ app.post("/welcome_page", (req, res) => {
             if (user && user.username == req.body.username){
                 if (user.password == req.body.password){
                     console.log("login successful");
-                    res.redirect("/tableReservation");
+                    res.redirect('/tableReservation/menu');
                 }
             }else{
-                redirect('/welcome_page');
+                res.redirect('/welcome_page');
             }
         });
               
 });
-
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.post("/tableReservation", (req, res) => {
@@ -52,12 +51,11 @@ app.post("/tableReservation", (req, res) => {
     const nbrPersonnes = req.body.number;
     const fullName = req.body.full_name;
     let addition = 0;
-    let i = 0;
-    const query = "insert into reservation values(i++, days, nbrPersonnes, 0, idCustomer, hours)";
-    pool.query(query, [i++, days, nbrPersonnes, addition, idCustomer, hours], (error, results) => {
+    const query = "insert into reservation (day, nbr_personnes, addition, id_customer_fkey, hour) values($1, $2, $3, $4, $5)";
+    pool.query(query, [days, nbrPersonnes, addition, idCustomer, hours], (error, results) => {
         if (error) throw error;
         res.status(200).send("reservation created successfully");
-        console.log("reservation created");
+        res.redirect('/tableReservation/menu');
     })       
 })
 
@@ -69,6 +67,10 @@ app.get('/welcome_page', (req, res) => {
 
 app.get('/tableReservation', (req, res) => {
     res.render("tableReservation.ejs");
+});
+
+app.get('/tableReservation/menu', (req, res) => {
+    res.render("menu.ejs");
 });
 
 //app.use('/welcome_page', restaurantRoutes);
