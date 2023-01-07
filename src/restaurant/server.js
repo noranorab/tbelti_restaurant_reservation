@@ -21,6 +21,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(express.static(staticPath));
 
+app.use(express.json());
 
 
 app.post("/welcome_page", (req, res) => {
@@ -34,7 +35,7 @@ app.post("/welcome_page", (req, res) => {
             if (user && user.username == req.body.username){
                 if (user.password == req.body.password){
                     console.log("login successful");
-                    res.redirect('/tableReservation/menu');
+                    res.redirect('/tableReservation');
                 }
             }else{
                 res.redirect('/welcome_page');
@@ -54,16 +55,26 @@ app.post("/tableReservation", (req, res) => {
     const query = "insert into reservation (day, nbr_personnes, addition, id_customer_fkey, hour) values($1, $2, $3, $4, $5)";
     pool.query(query, [days, nbrPersonnes, addition, idCustomer, hours], (error, results) => {
         if (error) throw error;
-        res.status(200).send("reservation created successfully");
         res.redirect('/tableReservation/menu');
     })       
 })
+
+app.post('/tableReservation/menu/burger', (req, res) => {
+  const value = req.body.value;
+  //res.json({ value });
+  app.get('/tableReservation/menu/receipe', (req, res) => {
+    res.render('receipe.ejs');
+    //res.render("receipe.ejs");
+    })
+});
+
 
 
 
 app.get('/welcome_page', (req, res) => {
     res.render("welcome_page.ejs");
 });
+
 
 app.get('/tableReservation', (req, res) => {
     res.render("tableReservation.ejs");
@@ -73,11 +84,21 @@ app.get('/tableReservation/menu', (req, res) => {
     res.render("menu.ejs");
 });
 
+app.get('/tableReservation/menu/burger', (req, res) => {
+    res.render("burger_builder.ejs");
+})
+/*
+app.get('/tableReservation/menu/receipe', (req, res) => {
+    res.render('receipe.ejs');
+    //res.render("receipe.ejs");
+})
+*/
 //app.use('/welcome_page', restaurantRoutes);
 
 app.listen(port, () => {
     console.log("Server is listening to port" + port);
 });
+
 
 
 

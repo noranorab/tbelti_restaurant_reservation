@@ -30,7 +30,11 @@ tomate.style.visibility = 'hidden';
 salade.style.visibility = 'hidden';
 cheese.style.visibility = 'hidden';
 
-for (let i = 0; i<wrappers.length; i++){
+
+let prices = document.getElementsByClassName("prix");
+let additionBurger = 2;
+let value = 0;
+for (let i = 1; i<wrappers.length; i++){
 
     if (wrappers[i].id == "wrapper1"){
         plus[i].addEventListener('click',function(){
@@ -52,6 +56,10 @@ for (let i = 0; i<wrappers.length; i++){
             
             console.log(new_steak);
             console.log('steak added');
+
+            additionBurger += parseInt(prices[i].innerHTML);
+            console.log(additionBurger);
+            value = additionBurger;
             
             
         })
@@ -66,7 +74,9 @@ for (let i = 0; i<wrappers.length; i++){
             new_cheese.classList.add("cheese");
             box.appendChild(new_cheese);
             box.insertBefore(new_cheese, bread_down)
-            
+            additionBurger += parseInt(prices[i].innerHTML);
+            console.log(additionBurger);
+            value = additionBurger;
         })
     }
     if (wrappers[i].id == "wrapper4"){
@@ -78,7 +88,10 @@ for (let i = 0; i<wrappers.length; i++){
             var new_salad = document.createElement('div');
             new_salad.classList.add("salad");
             box.appendChild(new_salad);
-            box.insertBefore(new_salad, bread_down)
+            box.insertBefore(new_salad, bread_down);
+            additionBurger += parseInt(prices[i].innerHTML);
+            console.log(additionBurger);
+            value = additionBurger;
         })
     }
     if (wrappers[i].id == "wrapper5"){
@@ -90,8 +103,33 @@ for (let i = 0; i<wrappers.length; i++){
             var new_tomato = document.createElement('div');
             new_tomato.classList.add("tomate");
             box.appendChild(new_tomato);
-            box.insertBefore(new_tomato, bread_down)
+            box.insertBefore(new_tomato, bread_down);
+            additionBurger += parseInt(prices[i].innerHTML);
+            console.log(additionBurger);
+            value = additionBurger;
         })
     }
 }
+/*
+var button = document.getElementById('btn1');
+button.addEventListener('click', function(){
+    fetch('/tableReservation/menu/burger', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ value : value })
+      });
+      window.location = 'http://localhost:3000/tableReservation/menu/receipe';
+    
+})
+*/
+/*
+document.querySelector("#btn1").addEventListener("click", function(){
+    document.querySelector(".popup").classList.add("active");
+});
 
+document.querySelector(".popup .close-btn").addEventListener("click", function(){
+     document.querySelector(".popup").classList.remove("active");
+});
+*/

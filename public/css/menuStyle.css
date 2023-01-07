@@ -24,7 +24,7 @@ body{
     width: 300px;
     height:380px;
     border-radius: 2%;   
-    top: 150px;
+    top: 140px;
     left:50px;
     background-color: rgb(255, 248, 184);
     opacity: 0.7;
@@ -34,18 +34,26 @@ body{
     font-family: "Vibur", sans-serif;
 }
 
+.buttons{
+    display: flex;
+    flex-direction: row;
+}
+
+.buttons button{
+    margin: 10px;
+}
 
 
 .img1{
     position: absolute;
     width: 50%;
     height: 650px;
-    left: 620px;
+    left: 670px;
 }
     
 .box-txt{
     display: flex;
-    margin-top: 90px;
+    margin-top: 60px;
     flex-direction: column;
     text-align: left;
     font-size: 20px;
@@ -155,4 +163,29 @@ body{
     font-size: 15px;
     color: rosybrown;
     
+}
+
+.finalPrice{
+    position: absolute;
+    color: black;
+    font-size: 24px;
+    bottom: 10px;
+    right: 25px;
+}
+
+.menu_and_buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.burger{
+    margin-top: 20px;
+    color : rgb(255, 247, 201);
+    font-size: 20px;
+    height: 40px;
+    width: fit-content;
+    background-color: rgb(224, 186, 104);
+    font-family: "Vibur", sans-serif;
+    border-radius: 5px;
 }

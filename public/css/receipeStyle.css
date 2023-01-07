@@ -1,0 +1,32 @@
+body{
+    background-color: rgb(53, 53, 53);
+}
+
+.container{
+    position: relative;
+    background-color: beige;
+    margin-top: 200px;
+    margin-left: 500px;
+    width: 300px;
+    height: 300px;
+}
+
+button{
+    position: absolute;
+    color : rgb(46, 46, 46);
+    font-size: 15px;
+    font-weight: bold;
+    height: 40px;
+    width: fit-content;
+    background-color: rgb(206, 205, 202);
+    border: none;
+    border-radius: 6px;
+    bottom: 10px;
+    left: 120px;
+}
+
+h1{
+    text-align: center;
+    color : rgb(46, 46, 46);
+    font-family: 'vibur', sans-serif;
+}
