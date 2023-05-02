@@ -1,10 +1,8 @@
 
 const express = require('express');
-//const restaurantRoutes = require('C:/Users/hp/Desktop/INE1_ASEDS/WebDev/tbelti_restaurant_reservation/src/restaurant/routes');
-//const controller = require('C:/Users/hp/Desktop/INE1_ASEDS/WebDev/tbelti_restaurant_reservation/src/restaurant/controller.js');
-//const queries = require('C:/Users/hp/Desktop/INE1_ASEDS/WebDev/tbelti_restaurant_reservation/src/restaurant/queries.js');
-const pool = require('C:/Users/hp/Desktop/INE1_ASEDS/WebDev/tbelti_restaurant_reservation/src/restaurant/database.js');
-const port = 3000;
+
+const pool = require('');
+const port = ;
 const app = express();
 const path = require('path');
 const bodyParser = require('body-parser');
